@@ -66,21 +66,21 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 449c4cfb7bb37a64dbdf9df2948c49c5, type: 3}
   - {fileID: 21300000, guid: a63c259ece319024396c2be786740f73, type: 3}
   m_PackedSpriteNamesToIndex:
-  - icon-arrow
-  - button-green#81,54,2,0
-  - bar2#40,11,2,0
-  - profil-box
-  - button-green-large#104,71,2,0
-  - button-settings-2
-  - button-white-large#104,71,2,0
-  - icon-close
+  - Arrow
+  - Button Green
+  - Bar Dark
+  - Profile
+  - Button Green Large
+  - Full Button
+  - Button White Large
+  - Close
   - card
-  - bar1#40,11,2,0
-  - box#41,21,2,0
+  - Bar Light
+  - Box
   - card-back
-  - button-white#81,54,2,0
-  - button-settings-1#82,50,2,0
-  - box-big#105,65,2,0
+  - Button White
+  - Half Button
+  - Box Big
   m_RenderDataMap: {}
   m_Tag: Ui Elements
   m_IsVariant: 0

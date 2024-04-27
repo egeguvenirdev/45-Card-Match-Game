@@ -832,6 +832,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6407422019448573170}
   - component: {fileID: 9191520245894302610}
+  - component: {fileID: 741091778238550159}
   - component: {fileID: 530016298949524225}
   m_Layer: 5
   m_Name: BackGround
@@ -868,6 +869,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2392995918456628898}
   m_CullTransparentMesh: 1
+--- !u!114 &741091778238550159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2392995918456628898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efd0b769b8f356147b3b5b25c97c707a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteAtlas: {fileID: 4343727234628468602, guid: 88df18d41a05f764da7b709060e8cce6, type: 2}
+  spriteName: Box Big
 --- !u!114 &530016298949524225
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2075,7 +2090,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7641478007788204422}
   - component: {fileID: 9174304006395885978}
-  - component: {fileID: 6010532292973018491}
   - component: {fileID: 6326242388424079441}
   m_Layer: 5
   m_Name: Left
@@ -2113,20 +2127,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4798306244237120959}
   m_CullTransparentMesh: 1
---- !u!114 &6010532292973018491
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4798306244237120959}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: efd0b769b8f356147b3b5b25c97c707a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spriteAtlas: {fileID: 4343727234628468602, guid: 88df18d41a05f764da7b709060e8cce6, type: 2}
-  spriteName: 
 --- !u!114 &6326242388424079441
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2357,6 +2357,7 @@ GameObject:
   m_Component:
   - component: {fileID: 395497451577176651}
   - component: {fileID: 3168133509812351998}
+  - component: {fileID: 1024589472234217618}
   - component: {fileID: 2938060145362829147}
   m_Layer: 5
   m_Name: BackGround
@@ -2393,6 +2394,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5326221825863286595}
   m_CullTransparentMesh: 1
+--- !u!114 &1024589472234217618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5326221825863286595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efd0b769b8f356147b3b5b25c97c707a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteAtlas: {fileID: 4343727234628468602, guid: 88df18d41a05f764da7b709060e8cce6, type: 2}
+  spriteName: Box Big
 --- !u!114 &2938060145362829147
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3512,6 +3527,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2725813271023407996}
   - component: {fileID: 3432064692987579522}
+  - component: {fileID: 8038977878473695606}
   - component: {fileID: 196774190658902157}
   m_Layer: 5
   m_Name: BackGround
@@ -3548,6 +3564,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7580456471054129946}
   m_CullTransparentMesh: 1
+--- !u!114 &8038977878473695606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7580456471054129946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efd0b769b8f356147b3b5b25c97c707a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteAtlas: {fileID: 4343727234628468602, guid: 88df18d41a05f764da7b709060e8cce6, type: 2}
+  spriteName: Box Big
 --- !u!114 &196774190658902157
 MonoBehaviour:
   m_ObjectHideFlags: 0
