@@ -12,6 +12,11 @@ public static class ActionManager
     public static Action<float> Updater { get; set; }
     public static Action<AudioClip> PlaySound { get; set; }
 
+    //Panel Actions
+    public static Action CancelButton { get; set; }
+    public static Action StartButton { get; set; }
+    public static Action SettingsButton { get; set; }
+
     //Visual Effects
     public static Action CamShake { get; set; }
     public static Func<Vector3, Vector3> GetOrtograficScreenToWorldPoint { get; set; }

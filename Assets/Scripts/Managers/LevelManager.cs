@@ -20,7 +20,7 @@ public class LevelManager : MonoSingleton<LevelManager>
 
     public void Init()
     {
-        GenerateCurrentLevel();
+        //GenerateCurrentLevel();
     }
 
     public void DeInit()

@@ -6,12 +6,10 @@ public abstract class ButtonBase : MonoBehaviour
 {
     protected VibrationManager vibration;
 
-    public virtual void Init()
+    private void Start()
     {
         vibration = VibrationManager.Instance;
     }
-
-    public abstract void DeInit();
 
     public virtual void OnButtonClick()
     {

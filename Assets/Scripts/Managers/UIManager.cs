@@ -8,7 +8,7 @@ using DG.Tweening;
 public class UIManager : MonoSingleton<UIManager>
 {
     [Header("Panels")]
-    [SerializeField] private ButtonBase[] panels;
+    [SerializeField] private PanelBase[] panels;
 
     [Header("Text Props")]
     [SerializeField] private TMP_Text timerText;

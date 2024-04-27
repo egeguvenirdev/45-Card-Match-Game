@@ -152,16 +152,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bd45e218d28fc34ea4952fbc68759fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectType: 0
-  clip: {fileID: 0}
-  upgradeType: 0
-  upgradeValue: 1
-  rotateVelocity: {x: 0, y: 0, z: 0}
-  rotateSpace: 0
-  speed: 4
-  value: 100
-  rotate: 0
-  maxHeight: {x: 0, y: 0.35, z: 0}
 --- !u!4 &94111378
 Transform:
   m_ObjectHideFlags: 0
@@ -428,10 +418,6 @@ PrefabInstance:
     - target: {fileID: 8628133915912742278, guid: dee08fe56ee80d448974ef2f5819c3f7, type: 3}
       propertyPath: m_Name
       value: Cam Holder
-      objectReference: {fileID: 0}
-    - target: {fileID: 8628133915912742279, guid: dee08fe56ee80d448974ef2f5819c3f7, type: 3}
-      propertyPath: ortograficCam
-      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dee08fe56ee80d448974ef2f5819c3f7, type: 3}
