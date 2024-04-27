@@ -1,0 +1,96 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Animals
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 1024
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 0
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: c03658086596ab04590f2b895a5cd9d3, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: b4a1bf50f3f9826429f7c49fb48b8e99, type: 3}
+  - {fileID: 21300000, guid: 39a2cb70d1720004aa3bf5397cea8ad1, type: 3}
+  - {fileID: 21300000, guid: 8fae211158624ac46a9707d7428f0b34, type: 3}
+  - {fileID: 21300000, guid: d0e83a022855b0a428acaf6da436b56d, type: 3}
+  - {fileID: 21300000, guid: 4ee0064237b036a4e9e87a322140dcc3, type: 3}
+  - {fileID: 21300000, guid: 95614a53db78fb148a2bab15d3418da7, type: 3}
+  - {fileID: 21300000, guid: 12c5e01481528824ab545734cd497b81, type: 3}
+  - {fileID: 21300000, guid: 29068c349f48ba4478369d8e487f49e1, type: 3}
+  - {fileID: 21300000, guid: 75152f55ff2dbf0428320895af0596cf, type: 3}
+  - {fileID: 21300000, guid: 291b77463ba65f946bf9bd0143e101af, type: 3}
+  - {fileID: 21300000, guid: dbdeb776786113c45a8b9c7e0a710c1b, type: 3}
+  - {fileID: 21300000, guid: f60454e66cc9f3c4e8cc0e5b0af42639, type: 3}
+  - {fileID: 21300000, guid: ad41a017c8b1dc342ae80de7fbbc8951, type: 3}
+  - {fileID: 21300000, guid: ca396b1ad9f707c4db3f080d9c212d7b, type: 3}
+  - {fileID: 21300000, guid: 33f9292a49315f8419261b73e01eeb78, type: 3}
+  - {fileID: 21300000, guid: adb7a69cde2287a42a5d303c478fe822, type: 3}
+  - {fileID: 21300000, guid: 9ee0a8bdfbda16442a52177e2e84edb4, type: 3}
+  - {fileID: 21300000, guid: f77af4edbe11a3742b0a6fabf442887c, type: 3}
+  - {fileID: 21300000, guid: 629dbc3ea3589f141bbc64fb594ddc06, type: 3}
+  - {fileID: 21300000, guid: e5f41d7e2097fe04c9154c5ac2ca3dce, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - animal9
+  - animal11
+  - animal18
+  - animal3
+  - avatar2
+  - animal16
+  - animal1
+  - animal15
+  - animal13
+  - animal14
+  - animal4
+  - animal12
+  - animal10
+  - animal8
+  - avatar1
+  - animal7
+  - animal2
+  - animal17
+  - animal5
+  - animal6
+  m_RenderDataMap: {}
+  m_Tag: Animals
+  m_IsVariant: 0

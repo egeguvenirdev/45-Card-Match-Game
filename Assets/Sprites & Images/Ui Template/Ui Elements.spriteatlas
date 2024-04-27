@@ -1,0 +1,86 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Ui Elements
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 1024
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 0
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: 657e6d6beeb850345a4d92e137806a92, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: b1778d3051084384b872c7356d604d72, type: 3}
+  - {fileID: 21300000, guid: e4dd07603f51f70498728bb4c28c3c24, type: 3}
+  - {fileID: 21300000, guid: 9713e3934bfa7214e923deccd1dfcf23, type: 3}
+  - {fileID: 21300000, guid: 27025a05bf439d74a82d8646407bf5e8, type: 3}
+  - {fileID: 21300000, guid: da329f05615296c42afd0604c3b4d75a, type: 3}
+  - {fileID: 21300000, guid: d5c12965290d1a94db95a8b6905c93de, type: 3}
+  - {fileID: 21300000, guid: 92affca57316ba7459f95a5006dacac5, type: 3}
+  - {fileID: 21300000, guid: 68c870d95f5e0b541890d545414aca34, type: 3}
+  - {fileID: 21300000, guid: 89861e5a0c7be534bab96d3c0090130c, type: 3}
+  - {fileID: 21300000, guid: d58f7f8a62cefec45862b4220d78ec9e, type: 3}
+  - {fileID: 21300000, guid: 27bf09ba9c543e1489c722adad5c762d, type: 3}
+  - {fileID: 21300000, guid: c4c80d0bf2a61a24b917e113c32c2dbf, type: 3}
+  - {fileID: 21300000, guid: 9b9d9f3b34af3ef40a5a9aa3202d7666, type: 3}
+  - {fileID: 21300000, guid: 449c4cfb7bb37a64dbdf9df2948c49c5, type: 3}
+  - {fileID: 21300000, guid: a63c259ece319024396c2be786740f73, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - icon-arrow
+  - button-green#81,54,2,0
+  - bar2#40,11,2,0
+  - profil-box
+  - button-green-large#104,71,2,0
+  - button-settings-2
+  - button-white-large#104,71,2,0
+  - icon-close
+  - card
+  - bar1#40,11,2,0
+  - box#41,21,2,0
+  - card-back
+  - button-white#81,54,2,0
+  - button-settings-1#82,50,2,0
+  - box-big#105,65,2,0
+  m_RenderDataMap: {}
+  m_Tag: Ui Elements
+  m_IsVariant: 0
