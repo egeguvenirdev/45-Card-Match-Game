@@ -158,7 +158,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2485972735816844044}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -302,7 +302,10 @@ MonoBehaviour:
   cardImage: {fileID: 8257205962543472127}
   button: {fileID: 733197923603383795}
   backSide: {fileID: 8256813137885005895}
-  frontSide: {fileID: 4409382975220805088}
+  frontSide:
+  - {fileID: 8193014456954853417}
+  - {fileID: 8257205962543472127}
+  frontSideParent: {fileID: 4409382975220805088}
 --- !u!1 &8256813137885005895
 GameObject:
   m_ObjectHideFlags: 0

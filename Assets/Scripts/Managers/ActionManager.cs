@@ -16,6 +16,7 @@ public static class ActionManager
     public static Action<CardBase, int> CardSelection { get; set; }
     public static Action<int> TrueSelection { get; set; }
     public static Action FalseSelection { get; set; }
+    public static Action PlayQueueChange { get; set; }
 
     //Panel Actions
     public static Action CancelButton { get; set; }

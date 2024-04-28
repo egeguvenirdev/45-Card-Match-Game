@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class CardBase : ButtonBase
 {
@@ -7,7 +8,8 @@ public class CardBase : ButtonBase
     [SerializeField] private Image cardImage;
     [SerializeField] private Button button;
     [SerializeField] private GameObject backSide;
-    [SerializeField] private GameObject frontSide;
+    [SerializeField] private Image[] frontSide;
+    [SerializeField] private GameObject frontSideParent;
 
     private bool canReact;
     private int key;
@@ -27,7 +29,7 @@ public class CardBase : ButtonBase
     {
         ActionManager.TrueSelection -= OnTrueSelection;
         ActionManager.FalseSelection -= OnFalseSelection;
-        Destroy(gameObject);
+        //Destroy(gameObject);
     }
 
     public override void OnButtonClick()
@@ -35,24 +37,60 @@ public class CardBase : ButtonBase
         base.OnButtonClick();
 
         if (!canReact) return;
-        backSide.SetActive(false);
-        frontSide.SetActive(true);
         canReact = false;
+        backSide.SetActive(false);
+        frontSideParent.SetActive(true);
+
+        Color tempColor = frontSide[0].color;
+        tempColor.a = 1;
+        for (int i = 0; i < frontSide.Length; i++)
+        {
+            frontSide[i].color = tempColor;
+        }
+
+        button.interactable = false;
+        ActionManager.CardSelection?.Invoke(this, key);
     }
 
     private void OnTrueSelection(int key)
     {
         if (this.key != key) return;
-        button.enabled = false;
+        button.interactable = false;
         canReact = false;
     }
 
     private void OnFalseSelection()
     {
-        if (!canReact) return;
+        HideButtons();
+        canReact = true;
+    }
 
-        button.enabled = false;
-        backSide.SetActive(false);
-        frontSide.SetActive(true);
+    private void HideButtons()
+    {
+        Color tempColor = frontSide[0].color;
+
+        DOTween.ToAlpha(() => tempColor, x => tempColor = x, 0, 1f).OnUpdate(() =>
+        {
+            for (int i = 0; i < frontSide.Length; i++)
+            {
+                frontSide[i].color = tempColor;
+            }
+
+        }).OnComplete(() =>
+        {
+            button.interactable = true;
+            backSide.SetActive(true);
+            frontSideParent.SetActive(false);
+        });
+    }
+
+    public void ActivateButton()
+    {
+        if (canReact) button.interactable = true;
+    }
+
+    public void DisableButton()
+    {
+        if (canReact) button.interactable = false;
     }
 }
