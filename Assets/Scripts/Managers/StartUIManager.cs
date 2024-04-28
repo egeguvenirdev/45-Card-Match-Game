@@ -50,7 +50,7 @@ public class StartUIManager : MonoSingleton<StartUIManager>
 
     private void OnGameStart()
     {
-        canvas.SetActive(true);
+        canvas.SetActive(false);
     }
 
     private void OnGameEnd()

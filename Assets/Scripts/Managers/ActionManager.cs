@@ -12,6 +12,11 @@ public static class ActionManager
     public static Action<float> Updater { get; set; }
     public static Action<AudioClip> PlaySound { get; set; }
 
+    //Card Actions
+    public static Action<CardBase, int> CardSelection { get; set; }
+    public static Action<int> TrueSelection { get; set; }
+    public static Action FalseSelection { get; set; }
+
     //Panel Actions
     public static Action CancelButton { get; set; }
     public static Action SettingsButton { get; set; }
