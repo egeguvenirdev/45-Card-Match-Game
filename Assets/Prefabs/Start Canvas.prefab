@@ -3315,8 +3315,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameInfo: {fileID: 11400000, guid: d8d5db081f3c44645ba4e51e5655ecb0, type: 2}
-  valueX: 6
-  valueY: 6
+  valueX: 4
+  valueY: 4
   thisHighlighter: {fileID: 6814775437150329087}
   otherHighlighter: {fileID: 5908250458758095599}
   thisButtonText: {fileID: 4467651898707345526}
@@ -4563,7 +4563,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8286306661346076680}
-  - component: {fileID: 240723975}
   - component: {fileID: 8286306661346076681}
   - component: {fileID: 8286306661346076682}
   - component: {fileID: 8286306661346076683}
@@ -4600,22 +4599,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &240723975
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8286306661346076916}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f117946356848e44bb74f9a7d2eecd78, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  panels:
-  - {fileID: 6887238582940104246}
-  - {fileID: 9191834704837091063}
-  timerText: {fileID: 1230992253484313722}
 --- !u!223 &8286306661346076681
 Canvas:
   m_ObjectHideFlags: 0

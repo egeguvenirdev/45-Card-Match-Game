@@ -8,8 +8,8 @@ public class GridSizer : ButtonBase
 {
     [Header("Button Values")]
     [SerializeField] private GamePlayInfos gameInfo;
-    [SerializeField] private float valueX = 4;
-    [SerializeField] private float valueY = 4;
+    [SerializeField] private int valueX = 4;
+    [SerializeField] private int valueY = 4;
 
     [Header("Components")]
     [SerializeField] private Image thisHighlighter;
@@ -19,10 +19,19 @@ public class GridSizer : ButtonBase
     [SerializeField] private Color32 disabledTextColor;
     [SerializeField] private Color32 selectedButtonColor;
 
+    protected override void Start()
+    {
+        base.Start();
+
+        if(gameInfo.GetGameInfos.GridSizeX == valueX)
+        {
+            OnButtonClick();
+        }
+    }
+
     public override void OnButtonClick()
     {
         base.OnButtonClick();
-        Debug.Log("clicktest");
         gameInfo.GetGameInfos.GridSizeX = valueX;
         gameInfo.GetGameInfos.GridSizeY = valueY;
         SetThisButton();

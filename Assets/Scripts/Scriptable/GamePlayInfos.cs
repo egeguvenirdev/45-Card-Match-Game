@@ -13,10 +13,10 @@ public class GamePlayInfos : ScriptableObject
     public class GameInfos
     {
         [Header("Grid")]
-        [SerializeField] private float minGridSizeX = 4;
-        [ShowOnly, SerializeField] private float gridSizeX = 4;
-        [SerializeField] private float minGridSizeY = 4;
-        [ShowOnly, SerializeField] private float gridSizeY = 4;
+        [SerializeField] private int minGridSizeX = 4;
+        [ShowOnly, SerializeField] private int gridSizeX = 4;
+        [SerializeField] private int minGridSizeY = 4;
+        [ShowOnly, SerializeField] private int gridSizeY = 4;
 
         [Header("Round Time (Min)")]
         [SerializeField] private int minTime = 2;
@@ -24,9 +24,9 @@ public class GamePlayInfos : ScriptableObject
 
         [Header("Round Count")]
         [SerializeField] private int minRoundCount = 3;
-        [ShowOnly, SerializeField] private int roundCount;
+        [ShowOnly, SerializeField] private int roundCount = 3;
 
-        public float GridSizeX
+        public int GridSizeX
         {
             get => gridSizeX;
             set
@@ -35,7 +35,7 @@ public class GamePlayInfos : ScriptableObject
                 if (gridSizeX < minGridSizeX) gridSizeX = minGridSizeX;
             }
         }
-        public float GridSizeY
+        public int GridSizeY
         {
             get => gridSizeY;
             set

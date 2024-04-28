@@ -6,7 +6,7 @@ public abstract class ButtonBase : MonoBehaviour
 {
     protected VibrationManager vibration;
 
-    private void Start()
+    protected virtual void Start()
     {
         vibration = VibrationManager.Instance;
     }

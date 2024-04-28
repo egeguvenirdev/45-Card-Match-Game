@@ -8,13 +8,12 @@ public static class ActionManager
 {
     //Game Actions
     public static Action GameStart { get; set; }
-    public static Action<bool> GameEnd { get; set; }
+    public static Action GameEnd { get; set; }
     public static Action<float> Updater { get; set; }
     public static Action<AudioClip> PlaySound { get; set; }
 
     //Panel Actions
     public static Action CancelButton { get; set; }
-    public static Action StartButton { get; set; }
     public static Action SettingsButton { get; set; }
 
     //Visual Effects

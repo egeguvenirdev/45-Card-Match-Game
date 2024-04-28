@@ -13,7 +13,8 @@ public class GameManager : MonoSingleton<GameManager>
     private LevelManager levelManager;
     private UpdateManager updateManager;
     private CamManager camManager;
-    private UIManager uIManager;
+    private StartUIManager startUIManager;
+    private GameUIManager gameUIManager;
     private AudioManager audioManager;
 
     void Start()
@@ -21,7 +22,8 @@ public class GameManager : MonoSingleton<GameManager>
         if (clearPlayerPrefs) PlayerPrefs.DeleteAll();
 
         levelManager = LevelManager.Instance;
-        uIManager = UIManager.Instance;
+        startUIManager = StartUIManager.Instance;
+        gameUIManager = GameUIManager.Instance;
         updateManager = FindObjectOfType<UpdateManager>();
         camManager = FindObjectOfType<CamManager>();
         audioManager = FindObjectOfType<AudioManager>();
@@ -32,7 +34,8 @@ public class GameManager : MonoSingleton<GameManager>
     private void SetInits()
     {
         levelManager.Init();
-        uIManager.Init();
+        startUIManager.Init();
+        gameUIManager.Init();
         updateManager.Init();
         audioManager.Init();
     }
@@ -40,7 +43,8 @@ public class GameManager : MonoSingleton<GameManager>
     private void DeInits()
     {
         levelManager.DeInit();
-        uIManager.DeInit();
+        startUIManager.DeInit();
+        gameUIManager.DeInit();
         updateManager.DeInit();
         camManager.DeInit();
         audioManager.DeInit();
@@ -69,9 +73,9 @@ public class GameManager : MonoSingleton<GameManager>
         SetInits();
     }
 
-    public void FinishTheGame(bool check)
+    public void FinishTheGame()
     {
         playerManager.DeInit();
-        ActionManager.GameEnd?.Invoke(check);
+        ActionManager.GameEnd?.Invoke();
     }
 }

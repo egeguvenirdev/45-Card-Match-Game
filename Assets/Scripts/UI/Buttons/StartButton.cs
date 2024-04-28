@@ -7,6 +7,6 @@ public class StartButton : ButtonBase
     public override void OnButtonClick()
     {
         base.OnButtonClick();
-        ActionManager.StartButton?.Invoke();
+        ActionManager.GameStart?.Invoke();
     }
 }

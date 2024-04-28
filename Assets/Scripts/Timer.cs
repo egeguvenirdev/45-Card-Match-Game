@@ -6,13 +6,13 @@ public class Timer : MonoBehaviour
 {
     [SerializeField] private float timeRemaining = 300f;
     private bool timerIsRunning = false;
-    private UIManager uIManager;
+    private StartUIManager uIManager;
     private GameManager gameManager;
 
     public void Init()
     {
         timerIsRunning = true;
-        uIManager = UIManager.Instance;
+        uIManager = StartUIManager.Instance;
         gameManager = GameManager.Instance;
     }
 

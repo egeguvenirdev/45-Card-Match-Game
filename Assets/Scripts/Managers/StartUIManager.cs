@@ -5,10 +5,13 @@ using UnityEngine.UI;
 using TMPro;
 using DG.Tweening;
 
-public class UIManager : MonoSingleton<UIManager>
+public class StartUIManager : MonoSingleton<StartUIManager>
 {
     [Header("Panels")]
     [SerializeField] private PanelBase[] panels;
+
+    [Header("Components")]
+    [SerializeField] private GameObject canvas;
 
     [Header("Text Props")]
     [SerializeField] private TMP_Text timerText;
@@ -20,6 +23,9 @@ public class UIManager : MonoSingleton<UIManager>
     {
         levelManager = LevelManager.Instance;
 
+        ActionManager.GameStart += OnGameStart;
+        ActionManager.GameEnd += OnGameEnd;
+
         for (int i = 0; i < panels.Length; i++)
         {
             panels[i].Init();
@@ -28,6 +34,9 @@ public class UIManager : MonoSingleton<UIManager>
 
     public void DeInit()
     {
+        ActionManager.GameStart -= OnGameStart;
+        ActionManager.GameEnd -= OnGameEnd;
+
         for (int i = 0; i < panels.Length; i++)
         {
             panels[i].DeInit();
@@ -37,5 +46,15 @@ public class UIManager : MonoSingleton<UIManager>
     public void TimerText(string refText)
     {
         timerText.text = refText;
+    }
+
+    private void OnGameStart()
+    {
+        canvas.SetActive(true);
+    }
+
+    private void OnGameEnd()
+    {
+        canvas.SetActive(false);
     }
 }
