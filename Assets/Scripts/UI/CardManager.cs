@@ -6,7 +6,7 @@ public class CardManager : MonoBehaviour
 {
     [Header("Animal Images")]
     [SerializeField] private List<Sprite> animalImages;
-    private List<Sprite> tempImages;
+    private List<Sprite> tempImages = new();
 
     [Header("Card Instantiate Settings")]
     [SerializeField] private GameObject cardObj;
@@ -41,7 +41,7 @@ public class CardManager : MonoBehaviour
 
     private void CreateCards(int valueX, int valueY)
     {
-        tempImages = animalImages;
+        FillTempList();
 
         for (int i = 0; i < valueX; i++)
         {
@@ -136,5 +136,14 @@ public class CardManager : MonoBehaviour
         }
 
         rows.Clear();
+    }
+
+    private void FillTempList()
+    {
+        tempImages.Clear();
+        for (int i = 0; i < animalImages.Count; i++)
+        {
+            tempImages.Add(animalImages[i]);
+        }
     }
 }

@@ -62,7 +62,6 @@ public class GameUIManager : MonoSingleton<GameUIManager>
     private void OnGameStart()
     {
         canvas.SetActive(true);
-        timer.Init(gameInfo.GetGameInfos.Time * 60f);
         OnRoundStart();
     }
 
@@ -70,7 +69,7 @@ public class GameUIManager : MonoSingleton<GameUIManager>
     {
         gamePanel.SetActive(true);
         roundPanel.DeInit();
-
+        timer.Init(gameInfo.GetGameInfos.Time * 60f);
         matchableCardCount = (gameInfo.GetGameInfos.GridSizeX * gameInfo.GetGameInfos.GridSizeY) / 2;
 
         roundText.text = "Round: " + currentRound + " / " + gameInfo.GetGameInfos.RoundCount;
@@ -161,7 +160,7 @@ public class GameUIManager : MonoSingleton<GameUIManager>
     public void TimerText(string time, float currentTime)
     {
         timeText.text = "Time: " + time;
-        Debug.Log(currentTime + " / " + gameInfo.GetGameInfos.Time * 60f + " / " + currentTime / ((float)gameInfo.GetGameInfos.Time * 60f));
+        //Debug.Log(currentTime + " / " + gameInfo.GetGameInfos.Time * 60f + " / " + currentTime / ((float)gameInfo.GetGameInfos.Time * 60f));
         remainingTime.fillAmount = currentTime / (gameInfo.GetGameInfos.Time * 60f);
     }
     #endregion
