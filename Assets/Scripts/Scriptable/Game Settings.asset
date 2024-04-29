@@ -14,6 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameInfos:
     minGridSizeX: 4
+    gridSizeX: 4
     minGridSizeY: 4
-    minTime: 2
-    minRoundCount: 3
+    gridSizeY: 4
+    minTime: 1
+    time: 2
+    minRoundCount: 1
+    roundCount: 3

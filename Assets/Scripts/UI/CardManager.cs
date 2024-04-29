@@ -33,7 +33,9 @@ public class CardManager : MonoBehaviour
     public void DeInit()
     {
         ActionManager.CardSelection -= OnCardSelection;
-
+        selectedCardCount = 0;
+        tempCard = null;
+        tempKey = 0;
         ClearTheDeck();
     }
 

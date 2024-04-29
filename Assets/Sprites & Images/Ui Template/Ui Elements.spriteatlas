@@ -57,6 +57,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: da329f05615296c42afd0604c3b4d75a, type: 3}
   - {fileID: 21300000, guid: d5c12965290d1a94db95a8b6905c93de, type: 3}
   - {fileID: 21300000, guid: 92affca57316ba7459f95a5006dacac5, type: 3}
+  - {fileID: 21300000, guid: db1009e638b514b45b9e324652370417, type: 3}
   - {fileID: 21300000, guid: 68c870d95f5e0b541890d545414aca34, type: 3}
   - {fileID: 21300000, guid: 89861e5a0c7be534bab96d3c0090130c, type: 3}
   - {fileID: 21300000, guid: d58f7f8a62cefec45862b4220d78ec9e, type: 3}
@@ -73,6 +74,7 @@ SpriteAtlas:
   - Button Green Large
   - Full Button
   - Button White Large
+  - blank white
   - Close
   - card
   - Bar Light

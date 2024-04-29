@@ -19,7 +19,7 @@ public class StartUIManager : MonoSingleton<StartUIManager>
     public void Init()
     {
         ActionManager.GameStart += OnGameStart;
-        ActionManager.GameEnd += OnGameEnd;
+        canvas.SetActive(true);
 
         for (int i = 0; i < panels.Length; i++)
         {
@@ -30,7 +30,6 @@ public class StartUIManager : MonoSingleton<StartUIManager>
     public void DeInit()
     {
         ActionManager.GameStart -= OnGameStart;
-        ActionManager.GameEnd -= OnGameEnd;
 
         for (int i = 0; i < panels.Length; i++)
         {
@@ -44,11 +43,6 @@ public class StartUIManager : MonoSingleton<StartUIManager>
     }
 
     private void OnGameStart()
-    {
-        canvas.SetActive(false);
-    }
-
-    private void OnGameEnd()
     {
         canvas.SetActive(false);
     }

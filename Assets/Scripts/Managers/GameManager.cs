@@ -34,20 +34,9 @@ public class GameManager : MonoSingleton<GameManager>
         gameUIManager.DeInit();
     }
 
-    public void OnLevelSucceed()
-    {
-        DeInits();
-        SetInits();
-    }
-
-    public void OnLevelFailed()
-    {
-        DeInits();
-        SetInits();
-    }
-
     public void FinishTheGame()
     {
-        ActionManager.GameEnd?.Invoke();
+        DeInits();
+        SetInits();
     }
 }

@@ -8,11 +8,14 @@ public class GameUIManager : MonoSingleton<GameUIManager>
     [SerializeField] private GamePlayInfos gameInfo;
 
     [Header("Components")]
+    [SerializeField] private Timer timer;
     [SerializeField] private GameObject canvas;
     [SerializeField] private GameObject gamePanel;
     [SerializeField] private RoundEndPanel roundPanel;
     [SerializeField] private CardManager cardManager;
     [SerializeField] private TMP_Text roundText;
+    [SerializeField] private TMP_Text timeText;
+    [SerializeField] private Image remainingTime;
     [SerializeField] private PlayerProfile player1;
     [SerializeField] private PlayerProfile player2;
 
@@ -38,30 +41,32 @@ public class GameUIManager : MonoSingleton<GameUIManager>
     public void Init()
     {
         ActionManager.GameStart += OnGameStart;
-        ActionManager.GameEnd += OnGameEnd;
         ActionManager.PlayQueueChange += OnPlayQueueChange;
-        ActionManager.ReduceCardCount += OnReduceCardCount;
         ActionManager.GivePoints += OnGivePoints;
         currentRound = 1;
+
+        playerOneScore = 0;
+        playerTwoScore = 0;
     }
 
     public void DeInit()
     {
         ActionManager.GameStart -= OnGameStart;
-        ActionManager.GameEnd -= OnGameEnd;
         ActionManager.PlayQueueChange -= OnPlayQueueChange;
-        ActionManager.ReduceCardCount -= OnReduceCardCount;
         ActionManager.GivePoints -= OnGivePoints;
+
+        canvas.SetActive(false);
     }
 
     #region Game Actions
     private void OnGameStart()
     {
         canvas.SetActive(true);
+        timer.Init(gameInfo.GetGameInfos.Time * 60f);
         OnRoundStart();
     }
 
-    private void OnRoundStart()
+    public void OnRoundStart()
     {
         gamePanel.SetActive(true);
         roundPanel.DeInit();
@@ -79,18 +84,11 @@ public class GameUIManager : MonoSingleton<GameUIManager>
         cardManager.Init(gameInfo.GetGameInfos.GridSizeX, gameInfo.GetGameInfos.GridSizeY);
     }
 
-    private void OnRoundEnd()
+    public void OnRoundEnd()
     {
-        playerOnePoint = 0;
-        playerOneScore = 0;
-        playerTwoPoint = 0;
-        playerTwoScore = 0;
-        playQueue = 1;
-        matchableCardCount = 0;
-        currentRound++;
-
         cardManager.DeInit();
         gamePanel.SetActive(false);
+        timer.DeInit();
 
         string winnerName;
 
@@ -99,21 +97,22 @@ public class GameUIManager : MonoSingleton<GameUIManager>
             winnerName = "WINNER IS PLAYER 1";
             playerOneScore++;
         }
-        else if (playerOnePoint > playerTwoPoint)
+        else if (playerOnePoint < playerTwoPoint)
         {
             winnerName = "WINNER IS PLAYER 2";
             playerTwoScore++;
         }
         else winnerName = "DRAW";
 
-        if (currentRound <= gameInfo.GetGameInfos.RoundCount) roundPanel.Init(false, winnerName, playerOneScore, playerTwoScore);
+        if (currentRound < gameInfo.GetGameInfos.RoundCount) roundPanel.Init(false, winnerName, playerOneScore, playerTwoScore);
         else roundPanel.Init(true, winnerName, playerOneScore, playerTwoScore);
         //canvas.SetActive(false);
-    }
 
-    private void OnGameEnd()
-    {
-        canvas.SetActive(false);
+        playerOnePoint = 0;
+        playerTwoPoint = 0;
+        playQueue = 1;
+        matchableCardCount = 0;
+        currentRound++;
     }
     #endregion
 
@@ -130,10 +129,7 @@ public class GameUIManager : MonoSingleton<GameUIManager>
             playerTwoPoint++;
             playerTwoPointText.text = "Point: " + playerTwoPoint;
         }
-    }
 
-    private void OnReduceCardCount()
-    {
         matchableCardCount--;
 
         if (matchableCardCount <= 0)
@@ -159,6 +155,14 @@ public class GameUIManager : MonoSingleton<GameUIManager>
     {
         player2.IncreaseAlpha();
         player1.ReduceAlpha();
+    }
+
+
+    public void TimerText(string time, float currentTime)
+    {
+        timeText.text = "Time: " + time;
+        Debug.Log(currentTime + " / " + gameInfo.GetGameInfos.Time * 60f + " / " + currentTime / ((float)gameInfo.GetGameInfos.Time * 60f));
+        remainingTime.fillAmount = currentTime / (gameInfo.GetGameInfos.Time * 60f);
     }
     #endregion
 }

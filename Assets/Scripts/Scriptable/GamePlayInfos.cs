@@ -19,11 +19,11 @@ public class GamePlayInfos : ScriptableObject
         [ShowOnly, SerializeField] private int gridSizeY = 4;
 
         [Header("Round Time (Min)")]
-        [SerializeField] private int minTime = 2;
+        [SerializeField] private int minTime = 1;
         [ShowOnly, SerializeField] private int time = 2;
 
         [Header("Round Count")]
-        [SerializeField] private int minRoundCount = 3;
+        [SerializeField] private int minRoundCount = 1;
         [ShowOnly, SerializeField] private int roundCount = 3;
 
         public int GridSizeX
