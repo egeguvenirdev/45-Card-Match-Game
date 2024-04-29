@@ -4,16 +4,15 @@ using UnityEngine;
 
 public class Timer : MonoBehaviour
 {
-    [SerializeField] private float timeRemaining = 300f;
+    private float timeRemaining = 60f;
     private bool timerIsRunning = false;
-    private StartUIManager uIManager;
-    private GameManager gameManager;
+    private GameUIManager uIManager;
 
-    public void Init()
+    public void Init(float seconds)
     {
+        timeRemaining = seconds;
         timerIsRunning = true;
-        uIManager = StartUIManager.Instance;
-        gameManager = GameManager.Instance;
+        uIManager = GameUIManager.Instance;
     }
 
     public void DeInit()
@@ -35,7 +34,7 @@ public class Timer : MonoBehaviour
                 Debug.Log("Time has run out!");
                 timeRemaining = 0;
                 timerIsRunning = false;
-                //gameManager.FinishTheGame(true); do the things here when the time expries
+                uIManager.OnRoundEnd(); // do the things here when the time expries
             }
         }
     }
@@ -44,6 +43,6 @@ public class Timer : MonoBehaviour
         timeToDisplay += 1;
         float minutes = Mathf.FloorToInt(timeToDisplay / 60);
         float seconds = Mathf.FloorToInt(timeToDisplay % 60);
-        uIManager.TimerText(string.Format("{0:00}:{1:00}", minutes, seconds));
+        uIManager.TimerText(string.Format("{0:00}:{1:00}", minutes, seconds), timeRemaining);
     }
 }
