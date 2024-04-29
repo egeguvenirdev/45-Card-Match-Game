@@ -91,20 +91,48 @@ public class GameUIManager : MonoSingleton<GameUIManager>
 
         string winnerName;
 
-        if (playerOnePoint > playerTwoPoint)
-        {
-            winnerName = "WINNER IS PLAYER 1";
-            playerOneScore++;
-        }
-        else if (playerOnePoint < playerTwoPoint)
-        {
-            winnerName = "WINNER IS PLAYER 2";
-            playerTwoScore++;
-        }
-        else winnerName = "DRAW";
 
-        if (currentRound < gameInfo.GetGameInfos.RoundCount) roundPanel.Init(false, winnerName, playerOneScore, playerTwoScore);
-        else roundPanel.Init(true, winnerName, playerOneScore, playerTwoScore);
+        if (currentRound < gameInfo.GetGameInfos.RoundCount)
+        {
+            if (playerOnePoint > playerTwoPoint)
+            {
+                winnerName = "WINNER IS PLAYER 1";
+                playerOneScore++;
+            }
+            else if (playerOnePoint < playerTwoPoint)
+            {
+                winnerName = "WINNER IS PLAYER 2";
+                playerTwoScore++;
+            }
+            else winnerName = "DRAW";
+
+            roundPanel.Init(false, winnerName, playerOneScore, playerTwoScore);
+        }
+
+        else
+        {
+            if (playerOnePoint > playerTwoPoint)
+            {
+                playerOneScore++;
+            }
+            if (playerOnePoint < playerTwoPoint)
+            {
+                playerTwoScore++;
+            }
+
+            if (playerOneScore > playerTwoScore)
+            {
+                winnerName = "WINNER IS PLAYER 1";
+                playerOneScore++;
+            }
+            else if (playerOneScore < playerTwoScore)
+            {
+                winnerName = "WINNER IS PLAYER 2";
+                playerTwoScore++;
+            }
+            else winnerName = "DRAW";
+            roundPanel.Init(true, winnerName, playerOneScore, playerTwoScore);
+        }
         //canvas.SetActive(false);
 
         playerOnePoint = 0;

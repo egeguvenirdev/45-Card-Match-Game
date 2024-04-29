@@ -3315,8 +3315,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameInfo: {fileID: 11400000, guid: d8d5db081f3c44645ba4e51e5655ecb0, type: 2}
-  valueX: 4
-  valueY: 4
+  valueX: 6
+  valueY: 6
   thisHighlighter: {fileID: 6814775437150329087}
   otherHighlighter: {fileID: 5908250458758095599}
   thisButtonText: {fileID: 4467651898707345526}
