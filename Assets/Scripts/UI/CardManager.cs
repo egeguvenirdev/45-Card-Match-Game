@@ -21,18 +21,23 @@ public class CardManager : MonoBehaviour
     private int selectedCardCount;
 
     private int roundCount = 1;
+    private int trueCardCount = 0;
 
-    public void Init()
+    public void Init(int valueX, int valueY)
     {
         ActionManager.CardSelection += OnCardSelection;
+
+        CreateCards(valueX, valueY);
     }
 
     public void DeInit()
     {
         ActionManager.CardSelection -= OnCardSelection;
+
+        ClearTheDeck();
     }
 
-    public void CreateCards(int valueX, int valueY)
+    private void CreateCards(int valueX, int valueY)
     {
         tempImages = animalImages;
 
@@ -81,7 +86,9 @@ public class CardManager : MonoBehaviour
             {
                 tempCard.DeInit();
                 card.DeInit();
+                trueCardCount++;
                 ActionManager.TrueSelection?.Invoke(key);
+                ActionManager.GivePoints?.Invoke();
             }
             else
             {
@@ -110,5 +117,22 @@ public class CardManager : MonoBehaviour
         {
             cards[i].DisableButton();
         }
+    }
+
+    public void ClearTheDeck()
+    {
+        for (int i = 0; i < cards.Count; i++)
+        {
+            cards[i].DestroyCard();
+        }
+
+        cards.Clear();
+
+        for (int i = 0; i < rows.Count; i++)
+        {
+            Destroy(rows[i].gameObject);
+        }
+
+        rows.Clear();
     }
 }

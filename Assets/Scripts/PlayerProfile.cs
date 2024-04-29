@@ -8,7 +8,23 @@ public class PlayerProfile : MonoBehaviour
 {
     [SerializeField] private Image[] images;
     [SerializeField] private TMP_Text[] texts;
+    [SerializeField] private TMP_Text scoreText;
+    [SerializeField] private TMP_Text pointText;
     [SerializeField] private float alphaValue;
+
+    private int score = 0;
+    private int point = 0;
+    private bool isActive;
+
+    public void Init()
+    {
+        score = 0;
+    }
+
+    public void DeInit()
+    {
+
+    }
 
     public void ReduceAlpha()
     {
@@ -29,6 +45,8 @@ public class PlayerProfile : MonoBehaviour
 
     public void IncreaseAlpha()
     {
+        isActive = true;
+
         for (int i = 0; i < images.Length; i++)
         {
             var tempColor = images[i].color;

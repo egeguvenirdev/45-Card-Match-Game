@@ -32,6 +32,11 @@ public class CardBase : ButtonBase
         //Destroy(gameObject);
     }
 
+    public void DestroyCard()
+    {
+        Destroy(gameObject);
+    }
+
     public override void OnButtonClick()
     {
         base.OnButtonClick();

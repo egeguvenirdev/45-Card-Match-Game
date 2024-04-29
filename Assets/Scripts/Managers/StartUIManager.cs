@@ -16,13 +16,8 @@ public class StartUIManager : MonoSingleton<StartUIManager>
     [Header("Text Props")]
     [SerializeField] private TMP_Text timerText;
 
-
-    private LevelManager levelManager;
-
     public void Init()
     {
-        levelManager = LevelManager.Instance;
-
         ActionManager.GameStart += OnGameStart;
         ActionManager.GameEnd += OnGameEnd;
 
